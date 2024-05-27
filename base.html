@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot with Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="chatbot-container">
+        <div class="header">
+            <h2>Mbank GPT BOT</h2>
+            <button class="refresh-button">&#8635;</button>
+        </div>
+        <div class="chat-window">
+            <div class="bot-message">
+                <p>What would you like to do today?</p>
+            </div>
+            <div class="button-container">
+                <button class="chat-button" data-redirect="https://www.mbank.ae/">Deposits</button>
+                <button class="chat-button" data-redirect="https://www.mbank.ae/">Nominee Management</button>
+                <button class="chat-button" data-redirect="https://www.mbank.ae/">Check Balance</button>
+                <button class="chat-button" data-redirect="https://www.mbank.ae/">Account Statement</button>
+                <button class="chat-button" data-redirect="https://www.mbank.ae/">Recent Transactions</button>
+                <button class="chat-button" data-redirect="https://www.mbank.ae/">Order Cheque Book</button>
+                <button class="chat-button" data-redirect="https://www.mbank.ae/">Stop Cheques</button>
+                <button class="chat-button" data-redirect="https://www.mbank.ae/">View Personal Details</button>
+                <button class="chat-button" data-redirect="https://www.mbank.ae/">Order Statement</button>
+                <button class="chat-button" data-redirect="https://www.mbank.ae/">Positive Pay</button>
+                <button class="chat-button" data-redirect="https://www.mbank.ae/">Open Savings Account</button>
+                <button class="chat-button" data-redirect="https://www.mbank.ae/">Apply for Current Account</button>
+                <button class="chat-button new-feature" data-redirect="https://www.mbank.ae/">Download Passbook</button>
+                <button class="login-button" onclick="showLoginForm()">Login</button>
+            </div>
+        </div>
+        <div class="input-box">
+            <input type="text" placeholder="Please type your Query here">
+            <button class="send-button">&#9658;</button>
+        </div>
+    </div>
+
+    <div class="login-form-container" id="loginForm">
+        <div class="login-form">
+            <h2>Login</h2>
+            <input type="text" id="username" placeholder="Customer Id" required>
+            <input type="password" id="password" placeholder="Phone No" required>
+            <button onclick="login()">Submit</button>
+            <button onclick="hideLoginForm()">Cancel</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
